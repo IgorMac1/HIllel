@@ -15,16 +15,11 @@ class Currency
         return $this->isoCode;
     }
 
-    public function setIsoCode($isoCode): string
+    public function setIsoCode($isoCode)
     {
-
-        foreach ($this->currences as $value) {
-            if ($value == strtoupper($isoCode)) {
-                return $this->isoCode = strtoupper($isoCode);
-            }
-        }
-        throw new InvalidArgumentException('Error');
-
+        if (in_array(strtoupper($isoCode), $this->currences)) {
+            $this->isoCode = strtoupper($isoCode);
+        } else throw new InvalidArgumentException('Error');
     }
 
     public function __construct($isoCode)

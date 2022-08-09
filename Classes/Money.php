@@ -25,14 +25,14 @@ class Money
         return $this->currency;
     }
 
-    public function setCurrency(Currency $currency): Currency
+    public function setCurrency(Currency $currency)
     {
-        return $this->currency = $currency;
+         $this->currency = $currency;
     }
 
-    public function setAmount($amount): int|float
+    public function setAmount($amount)
     {
-        return $this->amount = $amount;
+         $this->amount = $amount;
     }
 
     public function equals(Money $money): bool
