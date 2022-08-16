@@ -6,8 +6,9 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Classes\\Currency' => $baseDir . '/Classes/Currency.php',
-    'Classes\\Money' => $baseDir . '/Classes/Money.php',
+    'Classes\\Db' => $baseDir . '/Classes/Db.php',
+    'Classes\\Table' => $baseDir . '/Classes/Table.php',
+    'Classes\\Users' => $baseDir . '/Classes/Users.php',
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
     'Symfony\\Component\\VarDumper\\Caster\\AmqpCaster' => $vendorDir . '/symfony/var-dumper/Caster/AmqpCaster.php',
     'Symfony\\Component\\VarDumper\\Caster\\ArgsStub' => $vendorDir . '/symfony/var-dumper/Caster/ArgsStub.php',

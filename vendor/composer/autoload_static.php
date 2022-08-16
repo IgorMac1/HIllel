@@ -48,8 +48,9 @@ class ComposerStaticInit231ac5ea673d2195589d8d1e9555e359
     );
 
     public static $classMap = array (
-        'Classes\\Currency' => __DIR__ . '/../..' . '/Classes/Currency.php',
-        'Classes\\Money' => __DIR__ . '/../..' . '/Classes/Money.php',
+        'Classes\\Db' => __DIR__ . '/../..' . '/Classes/Db.php',
+        'Classes\\Table' => __DIR__ . '/../..' . '/Classes/Table.php',
+        'Classes\\Users' => __DIR__ . '/../..' . '/Classes/Users.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'Symfony\\Component\\VarDumper\\Caster\\AmqpCaster' => __DIR__ . '/..' . '/symfony/var-dumper/Caster/AmqpCaster.php',
         'Symfony\\Component\\VarDumper\\Caster\\ArgsStub' => __DIR__ . '/..' . '/symfony/var-dumper/Caster/ArgsStub.php',
