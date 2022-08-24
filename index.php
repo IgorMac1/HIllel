@@ -2,20 +2,38 @@
 require_once __DIR__ . '/vendor/autoload.php';
 
 
-use Classes\Currency;
-use Classes\Money;
+use Classes\Db;
 
+$db = Db::getInstance();
 
-try {
-    $money = new Money(35, new Currency('uah'));
-    $money1 = new Money(30, new Currency('usd'));
-    $money2 = new Money(25, new Currency('UAH'));
-    dd($money->add($money2));
+$arr = $db->getAll("SHOW TABLES FROM homework_13");
 
+if (array_key_exists(0, $arr)) {
+    foreach ($arr as $key) {
+        foreach ($key as $value) {
+            if ($value == 'users') {
+                $expression = true;
+                break;
+            }
+        }
+    }
+} else $expression = false;
 
-} catch (InvalidArgumentException $exception) {
-    echo $exception->getMessage();
+require "form.php";
+
+if (isset($_POST['create_table'])) {
+    $db->createTable();
+    header('location: ' . '/');
 }
+if (isset($_POST['go'])) {
+    $db->addNewUser($_POST);
+    header('location: ' . '/');
+}
+if (isset($_POST['deleteUsers'])) {
+    $db->deleteUsers($_POST);
+    header('location: ' . '/');
+}
+
 
 
 
