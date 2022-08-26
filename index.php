@@ -1,41 +1,104 @@
 <?php
 require_once __DIR__ . '/vendor/autoload.php';
 
+interface AppTaxi
+{
+    public function getTaxi();
 
-use Classes\Db;
+    public function getPrice();
+}
 
-$db = Db::getInstance();
+abstract class Taxi
+{
+    abstract protected function callTaxi(): AppTaxi;
 
-$arr = $db->getAll("SHOW TABLES FROM homework_13");
-
-if (array_key_exists(0, $arr)) {
-    foreach ($arr as $key) {
-        foreach ($key as $value) {
-            if ($value == 'users') {
-                $expression = true;
-                break;
-            }
-        }
+    public function getTaxi(): void
+    {
+        $taxiType = $this->callTaxi();
+        $taxiType->getTaxi();
     }
-} else $expression = false;
 
-require "form.php";
-
-if (isset($_POST['create_table'])) {
-    $db->createTable();
-    header('location: ' . '/');
-}
-if (isset($_POST['go'])) {
-    $db->addNewUser($_POST);
-    header('location: ' . '/');
-}
-if (isset($_POST['deleteUsers'])) {
-    $db->deleteUsers($_POST);
-    header('location: ' . '/');
+    public function getPrice()
+    {
+        $taxiPrice = $this->callTaxi();
+        $taxiPrice->getPrice();
+    }
 }
 
+class DispatcherEconomy extends Taxi
+{
 
+    protected function callTaxi(): AppTaxi
+    {
+        return new Economy();
+    }
+}
 
+class DispatcherStandard extends Taxi
+{
 
+    protected function callTaxi(): AppTaxi
+    {
+        return new Standard();
+    }
+}
 
+class DispatcherLux extends Taxi
+{
 
+    protected function callTaxi(): AppTaxi
+    {
+        return new Lux();
+    }
+}
+
+class Economy implements AppTaxi
+{
+    public function getTaxi()
+    {
+        echo 'Class - Economy ';
+    }
+
+    public function getPrice()
+    {
+        echo 'price - 10$';
+    }
+}
+
+class Standard implements AppTaxi
+{
+    public function getTaxi()
+    {
+        echo 'Class - Standard ';
+    }
+
+    public function getPrice()
+    {
+        echo 'price - 15$';
+    }
+}
+
+class Lux implements AppTaxi
+{
+    public function getTaxi()
+    {
+        echo 'Class - Lux ';
+    }
+
+    public function getPrice()
+    {
+        echo 'price - 20$';
+    }
+}
+
+function taxi(Taxi $taxi): void
+{
+    $taxi->getTaxi();
+    $taxi->getPrice();
+    echo '<br>';
+    echo '<hr>';
+}
+
+taxi(new DispatcherEconomy());
+taxi(new DispatcherStandard());
+taxi(new DispatcherLux());
