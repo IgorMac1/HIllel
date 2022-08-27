@@ -9,5 +9,6 @@ return array(
     'Symfony\\Polyfill\\Mbstring\\' => array($vendorDir . '/symfony/polyfill-mbstring'),
     'Symfony\\Component\\VarDumper\\' => array($vendorDir . '/symfony/var-dumper'),
     'Root\\Html\\' => array($baseDir . '/src'),
+    'Interfaces\\' => array($baseDir . '/Interfaces'),
     'Classes\\' => array($baseDir . '/Classes'),
 );

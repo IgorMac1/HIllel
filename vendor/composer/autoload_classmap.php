@@ -6,10 +6,17 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Classes\\Db' => $baseDir . '/Classes/Db.php',
-    'Classes\\Table' => $baseDir . '/Classes/Table.php',
-    'Classes\\Users' => $baseDir . '/Classes/Users.php',
+    'Classes\\LgApp' => $baseDir . '/Classes/LgApp.php',
+    'Classes\\LgLcdTv' => $baseDir . '/Classes/LgLcdTv.php',
+    'Classes\\LgLedTv' => $baseDir . '/Classes/LgLedTv.php',
+    'Classes\\SonyApp' => $baseDir . '/Classes/SonyApp.php',
+    'Classes\\SonyLcdTv' => $baseDir . '/Classes/SonyLcdTv.php',
+    'Classes\\SonyLedTv' => $baseDir . '/Classes/SonyLedTv.php',
+    'Classes\\TvType' => $baseDir . '/Classes/TvType.php',
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
+    'Interfaces\\LcdTv' => $baseDir . '/Interfaces/LcdTv.php',
+    'Interfaces\\LedTv' => $baseDir . '/Interfaces/LedTv.php',
+    'Interfaces\\TvApp' => $baseDir . '/Interfaces/TvApp.php',
     'Symfony\\Component\\VarDumper\\Caster\\AmqpCaster' => $vendorDir . '/symfony/var-dumper/Caster/AmqpCaster.php',
     'Symfony\\Component\\VarDumper\\Caster\\ArgsStub' => $vendorDir . '/symfony/var-dumper/Caster/ArgsStub.php',
     'Symfony\\Component\\VarDumper\\Caster\\Caster' => $vendorDir . '/symfony/var-dumper/Caster/Caster.php',

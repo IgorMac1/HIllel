@@ -22,6 +22,10 @@ class ComposerStaticInit231ac5ea673d2195589d8d1e9555e359
         array (
             'Root\\Html\\' => 10,
         ),
+        'I' => 
+        array (
+            'Interfaces\\' => 11,
+        ),
         'C' => 
         array (
             'Classes\\' => 8,
@@ -41,6 +45,10 @@ class ComposerStaticInit231ac5ea673d2195589d8d1e9555e359
         array (
             0 => __DIR__ . '/../..' . '/src',
         ),
+        'Interfaces\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Interfaces',
+        ),
         'Classes\\' => 
         array (
             0 => __DIR__ . '/../..' . '/Classes',
@@ -48,10 +56,17 @@ class ComposerStaticInit231ac5ea673d2195589d8d1e9555e359
     );
 
     public static $classMap = array (
-        'Classes\\Db' => __DIR__ . '/../..' . '/Classes/Db.php',
-        'Classes\\Table' => __DIR__ . '/../..' . '/Classes/Table.php',
-        'Classes\\Users' => __DIR__ . '/../..' . '/Classes/Users.php',
+        'Classes\\LgApp' => __DIR__ . '/../..' . '/Classes/LgApp.php',
+        'Classes\\LgLcdTv' => __DIR__ . '/../..' . '/Classes/LgLcdTv.php',
+        'Classes\\LgLedTv' => __DIR__ . '/../..' . '/Classes/LgLedTv.php',
+        'Classes\\SonyApp' => __DIR__ . '/../..' . '/Classes/SonyApp.php',
+        'Classes\\SonyLcdTv' => __DIR__ . '/../..' . '/Classes/SonyLcdTv.php',
+        'Classes\\SonyLedTv' => __DIR__ . '/../..' . '/Classes/SonyLedTv.php',
+        'Classes\\TvType' => __DIR__ . '/../..' . '/Classes/TvType.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
+        'Interfaces\\LcdTv' => __DIR__ . '/../..' . '/Interfaces/LcdTv.php',
+        'Interfaces\\LedTv' => __DIR__ . '/../..' . '/Interfaces/LedTv.php',
+        'Interfaces\\TvApp' => __DIR__ . '/../..' . '/Interfaces/TvApp.php',
         'Symfony\\Component\\VarDumper\\Caster\\AmqpCaster' => __DIR__ . '/..' . '/symfony/var-dumper/Caster/AmqpCaster.php',
         'Symfony\\Component\\VarDumper\\Caster\\ArgsStub' => __DIR__ . '/..' . '/symfony/var-dumper/Caster/ArgsStub.php',
         'Symfony\\Component\\VarDumper\\Caster\\Caster' => __DIR__ . '/..' . '/symfony/var-dumper/Caster/Caster.php',
