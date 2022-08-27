@@ -2,10 +2,14 @@
     "name": "root/html",
     "autoload": {
         "psr-4": {
-            "Root\\Html\\": "src/"
+            "Root\\Html\\": "src/",
+            "Classes\\": "Classes"
         }
     },
     "require-dev": {
         "larapack/dd": "^1.1"
+    },
+    "require": {
+        "ext-http": "*"
     }
 }
