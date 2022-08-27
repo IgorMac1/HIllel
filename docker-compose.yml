@@ -13,8 +13,7 @@ services:
     image: "mysql:8"
     # restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: my_secret
-      MYSQL_DATABASE: hillel
+      MYSQL_ROOT_PASSWORD: secret
     ports:
       - "33060:3306"
     volumes:
@@ -22,10 +21,10 @@ services:
     networks:
       - php_advanced
   php:
-#    image: "php:8.1-apache"
-#    environment:
-#      XDEBUG_MODE: "develop,debug"
-#      XDEBUG_CONFIG: client_host=host.docker.internal
+    #    image: "php:8.1-apache"
+    #    environment:
+    #      XDEBUG_MODE: "develop,debug"
+    #      XDEBUG_CONFIG: client_host=host.docker.internal
     build:
       context: .docker/php
     # restart: always

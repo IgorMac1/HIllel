@@ -1,0 +1,30 @@
+body{
+    background-color: cornflowerblue;
+    margin: 50px 30px;
+}
+
+.col-md-4{
+    text-align: center;
+    font-family: Skia;
+}
+.form-check{
+    font-family: Skia;
+}
+h1{
+    font-family: Skia;
+    text-align: center;
+    padding-bottom:35px ;
+}
+.col-12 .btn-primary{
+    font-family: "American Typewriter";
+    border: black solid 2px;
+}
+.form-control{
+    border: black solid 2px;
+}
+#validationDefault04{
+    border: black solid 2px;
+}
+#inputGroupPrepend2{
+    border: black solid 2px;
+}
