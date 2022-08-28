@@ -3,7 +3,9 @@
     "autoload": {
         "psr-4": {
             "Root\\Html\\": "src/",
-            "Classes\\": "Classes"
+            "Classes\\": "Classes/",
+            "Interfaces\\": "Interfaces/"
+
         }
     },
     "require-dev": {
