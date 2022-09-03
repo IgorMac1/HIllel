@@ -39,9 +39,9 @@ function removeLetters(string $str): string
 //   Очікуваний результат: "fox"
 function takeTextFromHooks(string $str): string
 {
-    $re = '/.+\(|\)/m';
-    $subst = '';
-    return preg_replace($re, $subst, $str);
+    $re = '/\[(.*?)\]/m';
+    preg_match($re, $str, $match);
+    return $match[1];
 }
 
 //5. Напишіть сценарій PHP, щоб видалити всі символи з рядка, крім a-z A-Z 0-9 або " ".
