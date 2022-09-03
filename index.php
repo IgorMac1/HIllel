@@ -37,17 +37,11 @@ function removeLetters(string $str): string
 //4. Напишіть сценарій PHP для вилучення тексту (в дужках) із рядка.
 //   Зразки рядків: "The quick brown [fox]"
 //   Очікуваний результат: "fox"
-
 function takeTextFromHooks(string $str): string
 {
-    $result = '';
-    $re = '/\((.*?)\)/';
-    preg_match_all($re, $str, $matches);
-    d($matches);
-    foreach ($matches[1] as $value) {
-        $result .= $value . ' ';
-    }
-    return $result;
+    $re = '/.+\(|\)/m';
+    $subst = '';
+    return preg_replace($re, $subst, $str);
 }
 
 //5. Напишіть сценарій PHP, щоб видалити всі символи з рядка, крім a-z A-Z 0-9 або " ".
@@ -56,15 +50,9 @@ function takeTextFromHooks(string $str): string
 
 function removeSymbols(string $str): string
 {
-    $result = '';
-    $re = '/[\w\d\s]/';
-    preg_match_all($re, $str, $matches, PREG_SET_ORDER, 0);
-    foreach ($matches as $key) {
-        foreach ($key as $value) {
-            $result .= $value;
-        }
-    }
-    return $result;
+    $re = '/[^a-z|\d|\s]/mi';
+    $subst = '';
+    return preg_replace($re, $subst, $str);
 }
 
 
